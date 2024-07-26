@@ -26,7 +26,10 @@ endef
 define Package/tuya-daemon/install
 		$(INSTALL_DIR) $(1)/usr/bin
 		$(INSTALL_BIN) $(PKG_BUILD_DIR)/build/tuyad $(1)/usr/bin
+		$(INSTALL_DIR) $(1)/etc/init.d
 		$(INSTALL_BIN) ./files/tuyad.init $(1)/etc/init.d/tuyad
+		$(INSTALL_DIR) $(1)/etc/config
+		$(INSTALL_BIN) ./files/tuyad.config $(1)/etc/config/tuyad
 endef
 
 $(eval $(call BuildPackage,tuya-daemon))
