@@ -23,15 +23,10 @@ define Package/tuya-daemon/description
   TODO.
 endef
 
-#define Build/Prepare
-#		mkdir -p $(PKG_BUILD_DIR)
-#		cp -r $(SOURCE_DIR)/* $(PKG_BUILD_DIR)
-#		$(Build/Patch)
-#endef
-
 define Package/tuya-daemon/install
 		$(INSTALL_DIR) $(1)/usr/bin
 		$(INSTALL_BIN) $(PKG_BUILD_DIR)/build/tuyad $(1)/usr/bin
+		$(INSTALL_BIN) ./files/tuyad.init $(1)/etc/init.d/tuyad
 endef
 
 $(eval $(call BuildPackage,tuya-daemon))
