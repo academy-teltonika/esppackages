@@ -16,7 +16,7 @@ define Package/tuyad/description
 	Tuya cloud communication daemon.
 endef
 
-PKG_BUILD_DEPENDS:=argp-standalone libtuya libubus libubox libblobmsg-json
+PKG_BUILD_DEPENDS:=argp-standalone
 
 define Package/tuyad
 	DEPENDS:=+libtuya +libubus +libubox +libblobmsg-json +espcommd
@@ -28,9 +28,9 @@ define Package/tuyad/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/tuyad $(1)/usr/bin
 	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_BIN) ./files/tuyad.init $(1)/etc/init.d/tuyad
+	$(INSTALL_DATA) ./files/tuyad.init $(1)/etc/init.d/tuyad
 	$(INSTALL_DIR) $(1)/etc/config
-	$(INSTALL_BIN) ./files/tuyad.config $(1)/etc/config/tuyad
+	$(INSTALL_DATA) ./files/tuyad.config $(1)/etc/config/tuyad
 endef
 
 $(eval $(call BuildPackage,tuyad))

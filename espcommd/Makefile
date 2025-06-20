@@ -16,9 +16,6 @@ define Package/espcommd/description
 	Ubus esp communication server daemon.
 endef
 
-PKG_BUILD_DEPENDS:=libsigroksp
-TARGET_LDFLAGS:=-lserialport
-
 define Package/espcommd
 	DEPENDS:=+libubus +libubox +libblobmsg-json +libsigroksp
 	CATEGORY:=Daemons
@@ -28,10 +25,10 @@ endef
 define Package/espcommd/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/espcommd $(1)/usr/bin
-	# $(INSTALL_DIR) $(1)/etc/init.d
-	# $(INSTALL_BIN) ./files/tuyad.init $(1)/etc/init.d/tuyad
-	# $(INSTALL_DIR) $(1)/etc/config
-	# $(INSTALL_BIN) ./files/tuyad.config $(1)/etc/config/tuyad
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_DATA) ./files/espcommd.init $(1)/etc/init.d/espcommd
+	$(INSTALL_DIR) $(1)/etc/config
+	$(INSTALL_DATA) ./files/espcommd.config $(1)/etc/config/espcommd
 endef
 
 $(eval $(call BuildPackage,espcommd))

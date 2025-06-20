@@ -2,7 +2,7 @@
 
 USE_PROCD=1
 START=90
-STOP=90
+STOP=01
 
 start_service() {
     local enabled
@@ -10,11 +10,11 @@ start_service() {
     local device_id
     local device_secret
 
-    config_load 'tuyad'
-    config_get enabled daemon 'enable' '0'
-    config_get product_id device_details 'product_id'
-    config_get device_id device_details 'device_id'
-    config_get device_secret device_details 'device_secret'
+    config_load "tuyad"
+    config_get enabled daemon "enable" "0"
+    config_get product_id device_details "product_id"
+    config_get device_id device_details "device_id"
+    config_get device_secret device_details "device_secret"
 
     if [ "$enabled" -eq 1 ]; then
         procd_open_instance
