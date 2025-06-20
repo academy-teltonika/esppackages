@@ -6,7 +6,7 @@ PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/academy-teltonika/tuyad.git
-PKG_SOURCE_VERSION:=dev
+PKG_SOURCE_VERSION:=a4f2d54c1c73fdb6528e6e15001503754af85e5f
  
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
@@ -17,7 +17,6 @@ define Package/tuyad/description
 endef
 
 PKG_BUILD_DEPENDS:=argp-standalone libtuya libubus libubox libblobmsg-json
-# LDFLAGS:=-largp
 
 define Package/tuyad
 	DEPENDS:=+libtuya +libubus +libubox +libblobmsg-json +espcommd
