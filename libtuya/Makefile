@@ -12,12 +12,12 @@ include $(INCLUDE_DIR)/cmake.mk
 CMAKE_BINARY_SUBDIR := build
 
 define Package/libtuya
-  CATEGORY:=Libraries
-  TITLE:=libtuya
+	CATEGORY:=Libraries
+	TITLE:=libtuya
 endef
 
 define Package/libtuya/description
-  Tuya cloud communiction library.
+	Tuya cloud communiction library.
 endef
 
 # We need this empty definition, because everything crashes and burns withuot it :)
