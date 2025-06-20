@@ -4,7 +4,6 @@ PKG_NAME:=tuyad
 PKG_VERSION:=1.0
 PKG_RELEASE:=1
 
-# PKG_SOURCE:=/home/studentas/Projects/tuyad
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/academy-teltonika/tuyad.git
 PKG_SOURCE_VERSION:=dev
@@ -17,10 +16,11 @@ define Package/tuyad/description
 	Tuya cloud communication daemon.
 endef
 
-PKG_BUILD_DEPENDS:=argp-standalone libtuya
+PKG_BUILD_DEPENDS:=argp-standalone libtuya libubus libubox libblobmsg-json
+# LDFLAGS:=-largp
 
 define Package/tuyad
-	DEPENDS:=+libtuya +libubus +libubox +libblobmsg-json +argp-standalone +espcommd
+	DEPENDS:=+libtuya +libubus +libubox +libblobmsg-json +espcommd
 	CATEGORY:=Daemons
 	TITLE:=tuyad
 endef

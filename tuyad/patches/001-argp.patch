@@ -1,0 +1,11 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -30,6 +30,7 @@ target_link_libraries(
+   ubus
+   ubox
+   blobmsg_json
++  argp
+ )
+
+ target_compile_options(tuyad PRIVATE
