@@ -4,10 +4,9 @@ PKG_NAME:=espcommd
 PKG_VERSION:=1.0
 PKG_RELEASE:=1
 
-PKG_SOURCE:=/home/studentas/Projects/espcommd
-# PKG_SOURCE_PROTO:=git
-# PKG_SOURCE_URL:=https://github.com/academy-teltonika/espcommd.git
-# PKG_SOURCE_VERSION:=56aaa4c201d5362bd89a05a6695dc160d38dacd8
+PKG_SOURCE_PROTO:=git
+PKG_SOURCE_URL:=https://github.com/academy-teltonika/espcommd.git
+PKG_SOURCE_VERSION:=0089e7dd5ac7eb2b297312d10dc7ac3c2afac7a8
  
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
