@@ -26,7 +26,7 @@ define Package/espcommd/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/espcommd $(1)/usr/bin
 	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_DATA) ./files/espcommd.init $(1)/etc/init.d/espcommd
+	$(INSTALL_BIN) ./files/espcommd.init $(1)/etc/init.d/espcommd
 	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_DATA) ./files/espcommd.config $(1)/etc/config/espcommd
 endef

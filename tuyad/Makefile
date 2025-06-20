@@ -28,7 +28,7 @@ define Package/tuyad/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/tuyad $(1)/usr/bin
 	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_DATA) ./files/tuyad.init $(1)/etc/init.d/tuyad
+	$(INSTALL_BIN) ./files/tuyad.init $(1)/etc/init.d/tuyad
 	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_DATA) ./files/tuyad.config $(1)/etc/config/tuyad
 endef
