@@ -6,7 +6,7 @@ PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/academy-teltonika/espcommd.git
-PKG_SOURCE_VERSION:=cd8cff8f26adeadbe1b6b4379e5ce4fd9ae9c267
+PKG_SOURCE_VERSION:=f771cc1b917c5026dfc3b0f22f213a0bb7e9cbb4
  
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk

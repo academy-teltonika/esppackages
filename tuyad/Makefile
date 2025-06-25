@@ -6,7 +6,7 @@ PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/academy-teltonika/tuyad.git
-PKG_SOURCE_VERSION:=f9b6dc10edd52bcadfa13e36d93146338e403e69
+PKG_SOURCE_VERSION:=7ba30e06aa07c3cb19242a6536974ca4ac260f29
  
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
