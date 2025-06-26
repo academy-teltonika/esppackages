@@ -2,4 +2,4 @@
 
 ## feeds.conf:
 
-src-link esppackages https://github.com/academy-teltonika/openwrt-packages.git^691f4dca618f0a755fbb45208c6243fe8ee74258
+src-link esppackages https://github.com/academy-teltonika/openwrt-packages.git^877fa1d8aaa37d0c0860595447d6ee2987f67e1a
